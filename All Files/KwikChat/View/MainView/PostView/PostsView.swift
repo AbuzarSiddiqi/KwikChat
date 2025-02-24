@@ -27,7 +27,18 @@ struct PostsView: View {
                     }
                     .padding(15)
                 }
-                .navigationTitle("Post's")
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink {
+                            SearchUserView()
+                        } label: {
+                            Image(systemName: "magnifyingglass")
+                                .tint(.black)
+                                .scaleEffect(0.9)
+                        }
+                    }
+                }
+                .navigationTitle("KwikChat")
         }
         .fullScreenCover(isPresented: $createNewPost) {
             CreateNewPost { post in

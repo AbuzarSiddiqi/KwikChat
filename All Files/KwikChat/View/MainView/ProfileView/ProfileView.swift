@@ -32,11 +32,7 @@ struct ProfileView: View {
                     ProgressView()
                 }
             }
-            .refreshable {
-                // Mark: Refresh User Data
-                myProfile = nil
-                await fetchUserData()
-            }
+           
             .navigationTitle(Text("My Profile"))
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -69,14 +65,16 @@ struct ProfileView: View {
                     }
                 }
      // Mark: Fetching User Data
-    func fetchUserData()async{
-        guard let userUID = Auth.auth().currentUser?.uid else{return}
-        guard let user = try? await Firestore.firestore().collection("Users").document(userUID).getDocument(as: User.self)
-        else{return}
-        await MainActor.run(body: {
-            myProfile = user
-        })
-        
+    func fetchUserData() async {
+        guard let userUID = Auth.auth().currentUser?.uid else { return }
+        do {
+            let user = try await Firestore.firestore().collection("Users").document(userUID).getDocument(as: User.self)
+            await MainActor.run {
+                self.myProfile = user
+            }
+        } catch {
+            await setError(error)
+        }
     }
     
          // Mark: Logging User Out
