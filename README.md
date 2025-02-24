@@ -7,6 +7,7 @@ A modern social networking app built with SwiftUI and Firebase, enabling real-ti
   <img src="Screenshots/feed.png" alt="News Feed" width="200"/>
   <img src="Screenshots/profile.png" alt="Profile Screen" width="200"/>
 </div>
+
 ## ✨ Features
 
 ### Current Features
