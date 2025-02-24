@@ -101,8 +101,12 @@ open KwikChat.xcworkspace
 5. Set up Firestore Database:
    - Create a new Firestore Database
    - Start in test mode
-   - Update rules according to your security needs
-
+   - Update rules according to your security needs (allow read, write: if  request.auth != null)
+5. Set up Firebase Storage:
+   - Create a new Firebase Storage
+   - Start in test mode
+   - Update rules according to your security needs (allow read, write: if  request.auth != null)
+     
 ### Xcode Configuration
 
 1. Open Xcode preferences
