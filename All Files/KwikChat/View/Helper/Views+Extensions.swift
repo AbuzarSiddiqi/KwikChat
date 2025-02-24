@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 // Mark: View Extension For UI Building
 extension View{
     //closing all active keyboards
