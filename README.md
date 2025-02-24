@@ -1,4 +1,5 @@
-📱 KwikChat
+##📱 KwikChat
+
 A modern social networking app built with SwiftUI and Firebase, enabling real-time communication and content sharing.
 
 ## ✨ Features
