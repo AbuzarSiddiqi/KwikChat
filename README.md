@@ -2,6 +2,7 @@
 
 A modern social networking app built with SwiftUI and Firebase, enabling real-time communication and content sharing.
 <div align="center">
+  <img src="Screenshots/logo.png" alt="Login Screen" width="200"/>
   <img src="Screenshots/login.png" alt="Login Screen" width="200"/>
   <img src="Screenshots/myprofile.png" alt="Profile Screen" width="200"/>
   <img src="Screenshots/feed.png" alt="News Feed" width="200"/>
